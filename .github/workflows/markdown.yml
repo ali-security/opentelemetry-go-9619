@@ -3,13 +3,9 @@ name: Markdown
 on:
   repository_dispatch:
   workflow_dispatch:
-  schedule:
-  # Everyday at 9:00 AM.
-  - cron: "0 9 * * *"
-
 jobs:
   lint-markdown:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v4
